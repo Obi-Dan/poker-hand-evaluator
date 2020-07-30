@@ -20,7 +20,7 @@ docker run -it --rm -e INPUT=<filename> poker-hand-evaluator
 ```
 Example:
 ```bash
-docker run -it --rm -e INPUT="Input4.txt" poker-hand-evaluator
+docker run -it --rm -e INPUT="Input3.txt" poker-hand-evaluator
 ```
 
 ### Command Line
