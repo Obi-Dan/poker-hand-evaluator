@@ -1,11 +1,12 @@
-package org.hofferbert;
+package org.obidan.utility;
 
 /**
  * Extracts arguments passed from the consumer.
  * 
- * @author Daniel Hofferbert
+ * @author Obi-Dan
  */
-class ArgumentExtractor {
+public class ArgumentExtractor {
+
 	/**
 	 * Gets the first argument from an array of arguments.
 	 * 
@@ -14,9 +15,10 @@ class ArgumentExtractor {
 	 * @return Possibly null first argument. If non-null then it will also be
 	 *         non-blank.
 	 */
-	String getFirstArgument(String[] arguments) {
+	public String getFirstArgument(final String[] arguments) {
+
 		if (arguments != null && arguments.length > 0) {
-			String firstArgument = arguments[0];
+			final String firstArgument = arguments[0];
 			if (firstArgument != null && !firstArgument.trim().isEmpty()) {
 				return firstArgument;
 			}

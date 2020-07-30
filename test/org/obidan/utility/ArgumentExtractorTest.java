@@ -1,4 +1,4 @@
-package org.hofferbert;
+package org.obidan.utility;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 /**
  * Unit tests for the {@link ArgumentExtractor} class.
  * 
- * @author Daniel Hofferbert
+ * @author Obi-Dan
  */
 class ArgumentExtractorTest {
+
 	private final ArgumentExtractor argumentExtractor = new ArgumentExtractor();
 
 	/**
@@ -18,7 +19,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_NullArguments() {
-		assertEquals(null, argumentExtractor.getFirstArgument(null));
+		assertEquals(null, this.argumentExtractor.getFirstArgument(null));
 	}
 
 	/**
@@ -28,7 +29,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_EmptyArguments() {
-		assertEquals(null, argumentExtractor.getFirstArgument(new String[] {}));
+		assertEquals(null, this.argumentExtractor.getFirstArgument(new String[] {}));
 	}
 
 	/**
@@ -38,7 +39,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_SingleNullArgument() {
-		assertEquals(null, argumentExtractor.getFirstArgument(new String[] { null }));
+		assertEquals(null, this.argumentExtractor.getFirstArgument(new String[] { null }));
 	}
 
 	/**
@@ -48,7 +49,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_SingleEmptyArgument() {
-		assertEquals(null, argumentExtractor.getFirstArgument(new String[] { "" }));
+		assertEquals(null, this.argumentExtractor.getFirstArgument(new String[] { "" }));
 	}
 
 	/**
@@ -58,7 +59,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_SingleBlankArgument() {
-		assertEquals(null, argumentExtractor.getFirstArgument(new String[] { "\t   \n\t" }));
+		assertEquals(null, this.argumentExtractor.getFirstArgument(new String[] { "\t   \n\t" }));
 	}
 
 	/**
@@ -68,7 +69,7 @@ class ArgumentExtractorTest {
 	 */
 	@Test
 	void test_getFirstArgument_SingleValidArgument() {
-		assertEquals("Input1.txt", argumentExtractor.getFirstArgument(new String[] { "Input1.txt" }));
+		assertEquals("Input1.txt", this.argumentExtractor.getFirstArgument(new String[] { "Input1.txt" }));
 	}
 
 	/**
@@ -79,6 +80,6 @@ class ArgumentExtractorTest {
 	@Test
 	void test_getFirstArgument_TwoValidArguments() {
 		assertEquals("FirstArgument",
-				argumentExtractor.getFirstArgument(new String[] { "FirstArgument", "SecondArgument" }));
+				this.argumentExtractor.getFirstArgument(new String[] { "FirstArgument", "SecondArgument" }));
 	}
 }
